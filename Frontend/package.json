@@ -1,0 +1,36 @@
+{
+  "name": "pratilipi",
+  "version": "0.1.0",
+  "description": "Pratilipi Web application",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncp-project/Pratilipi.git"
+  },
+  "author": "Abhishek Bvs",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-source-maps": "0.0.3",
+    "antd": "^4.1.0",
+    "axios": "^0.19.2",
+    "es6-promise": "^4.2.8",
+    "isomorphic-fetch": "^3.0.0",
+    "next": "^9.3.4",
+    "next-compose-plugins": "^2.2.0",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-google-login": "^5.1.2",
+    "react-loading": "^2.0.3",
+    "react-quill": "^1.3.5",
+    "universal-cookie": "^4.0.3"
+  }
+}

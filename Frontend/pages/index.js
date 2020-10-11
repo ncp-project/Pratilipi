@@ -6,7 +6,9 @@ const HomePage = (props) => {
   return (
     <Base loginRequired >
       <h5>Home Page</h5>
+      <Link href="/play"><button className="btn btn-primary rounded-0">Play</button></Link>
     </Base>
+
   )
 };
 

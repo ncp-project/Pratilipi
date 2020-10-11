@@ -19,13 +19,8 @@ const Base = ({children, loginRequired}) => {
         <Layout style={{ minHeight: "100vh" }}>
           <TopNav loginRequired/>
           <Layout>
-            <SideNav/>
+            {/* <SideNav/> */}
             <Layout style={{ padding: '24px 24px 24px' }}>
-              {/* <Breadcrumb style={{ margin: '16px 0' }}>
-                <Breadcrumb.Item>Home</Breadcrumb.Item>
-                <Breadcrumb.Item>List</Breadcrumb.Item>
-                <Breadcrumb.Item>App</Breadcrumb.Item>
-              </Breadcrumb> */}
               <Content
                 className=""
                 style={{

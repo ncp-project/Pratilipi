@@ -30,7 +30,8 @@
     "react-dom": "^16.13.1",
     "react-google-login": "^5.1.2",
     "react-loading": "^2.0.3",
-    "react-quill": "^1.3.5",
+    "react-webcam": "5.2.0",
+    "npmuill": "^1.3.5",
     "universal-cookie": "^4.0.3"
   }
 }

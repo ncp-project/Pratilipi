@@ -178,9 +178,6 @@ GRAPHQL_JWT = {
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
-    'http://localhost:8000',
-    'https://open-devo-cell-1.herokuapp.com',
-    'https://open-devo-cell.now.sh'
 )
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.getenv('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')

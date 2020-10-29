@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'easy_select2',
     'ckeditor',
     'profiles',
+    'ocr',
 ]
 
 MIDDLEWARE = [

@@ -78,7 +78,7 @@ function LoginPage(props) {
       {
         status.googleSignIn ? (
           <GoogleLogin
-            clientId="762421344167-8q93vtrpbeobiabt7nn7krjtippivnvf.apps.googleusercontent.com"
+            clientId="52577678569-df641phbibq12eacs451euh14lbpgvl6.apps.googleusercontent.com"
             onSuccess={loginWithGoogle}
             icon={true}
             cookiePolicy={'single_host_origin'}

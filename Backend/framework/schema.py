@@ -4,6 +4,8 @@ import graphql_jwt
 from django.contrib.auth.models import User
 from graphql_jwt.shortcuts import get_token, get_refresh_token, create_refresh_token
 from profiles.schema import Query as ProfileQueries, Mutation as ProfileMutations
+from profiles.schema import Query as ProfileQueries, Mutation as ProfileMutations
+from ocr.schema import Mutation as OCRMutations
 
 class StatusObj(graphene.ObjectType):
     googleSignIn = graphene.Boolean()
@@ -31,6 +33,7 @@ class Query(
 
 class Mutation(
     ProfileMutations,
+    OCRMutations,
     graphene.ObjectType
 ):
     token_auth = graphql_jwt.ObtainJSONWebToken.Field()

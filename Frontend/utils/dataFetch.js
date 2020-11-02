@@ -3,8 +3,8 @@ import Cookies from 'universal-cookie';
 
 const cookies = new Cookies();
 
-// const API_URL = 'http://localhost:8000/';
-const API_URL = 'https://pratilipi-ncp.herokuapp.com';
+const API_URL = 'http://localhost:8000/';
+// const API_URL = 'https://pratilipi-ncp.herokuapp.com';
 
 export default ({ query, variables, token }) => {
     const body = {

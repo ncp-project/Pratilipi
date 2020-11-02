@@ -11,8 +11,9 @@ var _universalCookie = _interopRequireDefault(require("universal-cookie"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var cookies = new _universalCookie["default"]();
-var API_URL = 'http://localhost:8000/'; // const API_URL = 'https://pratilipi-ncp.herokuapp.com';
+var cookies = new _universalCookie["default"](); // const API_URL = 'http://localhost:8000/';
+
+var API_URL = 'https://pratilipi-ncp.herokuapp.com';
 
 var _default = function _default(_ref) {
   var data = _ref.data;

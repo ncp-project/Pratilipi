@@ -11,65 +11,57 @@ const PlayPage = (props) => {
 
   const [file, setFileResponse] = useState("");
 
-  const uploadFile = async data => await fileUpload(data);
-  const uploadProps = {
-    name: "file",
-    multiple: false,
+  const uploadProps ={
+    name:"file",
+    nultiple: false,
     showUploadList: false,
-    customRequest: ({ file }) => {
-        const data = new FormData();
-        data.append('File', file);
-        const query = `mutation{
-            uploadOCRFile{
-              fileName
-            } 
-        }`;
-        data.append('query', query);
-        uploadFile({ data }).then((response) => (
-            setFileResponse(response.data.uploadOCRFile.fileName)
-        ));
+
+    customRequest: ({file})=>{
+      const data = new FormData();
+      data.append('file',file);
+      fetch('https://ocr-telugu.herokuapp.com/', {
+      // fetch('http://localhost:4000/', {
+        method:'POST',
+        body: data,
+      })
+      .then((response) => response.json())
+      .then((jsonData) => {
+        setFileResponse(jsonData.data);
+      });
     }
-  };
+  }
 
   const renderPlay =  (
-    
       <div className={classNames("row m-0")}>
-          <div className="col-md-6 p-3">
-          
-          <Button href="/play/scan" className="row" style={{ width: '30vh'}} >
-            <ScanOutlined /> Scan a document
-          </Button>
-              
-          </div>
-          <div className="col-md-6 p-3">
           {
             file != "" ? (
-              <Result
-              status="success"
-              title = ""
-              extra={<Link href="/play/result"><a><Button type="primary">Succesfully uploaded {file}</Button></a></Link>}
-            />
+            <div style={{fontSize:30}} dangerouslySetInnerHTML={{__html: file}}/>
             ):
             (
-
-              <Upload {...uploadProps} accept="image/*, .pdf">
-                <Button className="row" style={{ width: '30vh' }}>
-                    <UploadOutlined />
-                    Upload File
-                </Button>
-              </Upload>
+              <div>
+                <div className="col-md-6 p-3">
+                  <Button href="/play/scan" className="row" style={{ width: '30vh'}} >
+                    <ScanOutlined /> Scan a document
+                  </Button>
+                </div>
+                <div className="col-md-6 p-3">
+                  <Upload {...uploadProps} accept="image/*">
+                    <Button className="row" style={{ width: '30vh' }}>
+                        <UploadOutlined />
+                        Upload File
+                    </Button>
+                  </Upload>
+                </div>
+              </div>
             )
           }
-          </div>
-      </div>
+        </div>
   );
- 
-
   return (
     <Base loginRequired >
         
         <div className="container p-0">
-        <h5>Playground</h5>
+        <h5>OCR Telugu</h5>
         {renderPlay}
         </div>
     </Base>
